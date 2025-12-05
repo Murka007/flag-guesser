@@ -5,6 +5,7 @@ const random = (min: number, max: number) => {
 }
 
 export type TFlag = [code: string, name: string];
+type TFlagData = readonly [TFlag, TFlag[]];
 const FlagPicker = () => {
     const totalFlags: TFlag[] = Object.entries(countries);
     const usedFlags: TFlag[] = [];
@@ -16,7 +17,14 @@ const FlagPicker = () => {
     }
     reset();
 
-    const pick = () => {
+    let nextFlagData: TFlagData | null = null;
+    const pick = (): TFlagData => {
+        if (nextFlagData !== null) {
+            const temp = nextFlagData;
+            nextFlagData = null;
+            return temp;
+        }
+
         const output: TFlag[] = [];
 
         while (output.length !== 4 && flagList.length !== 0) {
@@ -33,9 +41,15 @@ const FlagPicker = () => {
         ] as const;
     }
 
+    const selectNextFlag = () => {
+        nextFlagData = pick();
+        return nextFlagData;
+    }
+
     return {
         reset,
         pick,
+        selectNextFlag,
     }
 }
 
