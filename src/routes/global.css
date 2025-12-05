@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+body {
+    background: #65C1E6;
+    background: radial-gradient(circle, rgba(101, 193, 230, 0.8) 70%, rgba(189, 236, 255, 1) 100%);
+}
+
+.bg-animation {
+    position: absolute;
+    inset: 0;
+    background: url("../assets/background.svg") 0 0 / 200px repeat;
+    animation: moving 6s linear infinite;
+    z-index: -1;
+    filter: opacity(0.3) blur(6px);
+    mask: radial-gradient(circle, black 0%, transparent 100%);
+    -webkit-mask: radial-gradient(circle, black 0%, transparent 100%);
+}
+
+@keyframes moving {
+    from { background-position: 0 0; }
+    to   { background-position: -600px 600px; }
+}
+
+.shadow-primary {
+    @apply shadow-[inset_0_1px_0_0_rgba(225,225,225,0.6),inset_0_-2px_0_0_rgba(0,0,0,0.1)];
+}
+
+.icon-primary {
+    @apply text-gray-700 hover:text-gray-600 transition-colors bg-amber-50 rounded-2xl;
+}
+
+.defaultAnswer {
+    @apply bg-blue-600 hover:bg-blue-500 active:bg-blue-700;
+}
+
+.correctAnswer {
+    @apply bg-green-600 hover:bg-green-500 active:bg-green-700;
+}
+
+.wrongAnswer {
+    @apply bg-red-600 hover:bg-red-500 active:bg-red-700;
+}
