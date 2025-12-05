@@ -1,0 +1,1 @@
+const e="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2012%206'%3e%3cdefs%3e%3cclipPath%20id='a'%3e%3cpath%20d='M0%200h12v6H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3cpath%20fill='%23007749'%20d='M0%200h12v6H0z'/%3e%3cpath%20fill='%232d2926'%20stroke='%23ffb81c'%20clip-path='url(%23a)'%20d='M-2-1v8l16-8v8z'/%3e%3c/svg%3e";export{e as default};

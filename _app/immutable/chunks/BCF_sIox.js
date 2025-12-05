@@ -1,0 +1,1 @@
+const e="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2027%2018'%3e%3ctitle%3eFlag%20of%20The%20Gambia%3c/title%3e%3cpath%20d='m0,0h27v18H0'%20fill='%233A7728'/%3e%3cpath%20d='m0,0h27v11H0'%20fill='%230C1C8C'/%3e%3cpath%20d='m0,0h27v6H0'%20fill='%23CE1126'/%3e%3cpath%20d='m0,6.5h27m0,5H0'%20stroke='%23FFF'/%3e%3c/svg%3e";export{e as default};
